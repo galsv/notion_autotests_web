@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "notion-autotests-web"
+version = "0.1.0"
+description = ""
+authors = ["Sergey Galtsov <galtsovsergey@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^7.2.0"
+selene = {version = "^2.0.0b16", allow-prereleases = true}
+allure-pytest = "^2.12.0"
+python-dotenv = "^0.21.0"
+pyperclip = "^1.8.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
