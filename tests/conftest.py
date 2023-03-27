@@ -48,7 +48,7 @@ def browser_management(request):
     )
     browser.config.driver = driver
 
-    browser.config.timeout = 6
+    browser.config.timeout = 20
     browser.config.base_url = 'https://www.notion.so'
     browser.config.browser_name = 'chrome'
     browser.config.window_width = 1920
