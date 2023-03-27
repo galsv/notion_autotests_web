@@ -46,8 +46,8 @@ def test_delete_page_permanently(browser_management):
         app.trash.wait_page_in_trash()
         .should_page_in_trash()
 
-        .trash.delete_page_permanently()
-        .trash.should_page_in_trash(should=False)
+        .delete_page_permanently()
+        .should_page_in_trash(should=False)
 
-        .trash.close_menu()
+        .close_menu()
     )

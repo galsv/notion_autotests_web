@@ -5,9 +5,8 @@ import allure
 
 
 def login(user_login: str, user_password: str):
-    with allure.step('Open notion and click Login button'):
-        browser.open('/')
-        browser.element(by.text('Log in')).click()
+    with allure.step('Open login page'):
+        browser.open('/login')
 
     with allure.step('Fill email and click next button'):
         browser.element('[placeholder="Enter your email address..."]').type(user_login)
@@ -24,7 +23,7 @@ def should_success_login(user_login: str):
 
     with allure.step('Should main page after login'):
         browser.element(by.text(user_login)).should(be.visible)
-        sidebar_switcher.double_click()
+        browser.element('.check').click()
         time.sleep(1)
 
 

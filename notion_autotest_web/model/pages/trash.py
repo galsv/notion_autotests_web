@@ -24,6 +24,7 @@ class Trash:
         return self
 
     def page_by_name(self):
+        self.pages.wait_until(have.size_greater_than(0))
         for page in self.pages:
             if page.matching(have.text(self.page_name)):
                 return page

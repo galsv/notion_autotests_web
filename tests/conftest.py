@@ -23,12 +23,13 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='module')
 def browser_management(request):
     browser_version = request.config.getoption('--browser_version')
     browser_version = browser_version if browser_version != "" else DEFAULT_BROWSER_VERSION
     options = Options()
 
+    browser.config.hold_browser_open = True
     selenoid_capabilities = {
         "browserName": "chrome",
         "browserVersion": browser_version,
@@ -48,7 +49,7 @@ def browser_management(request):
     )
     browser.config.driver = driver
 
-    browser.config.timeout = 20
+    browser.config.timeout = 30
     browser.config.base_url = 'https://www.notion.so'
     browser.config.browser_name = 'chrome'
     browser.config.window_width = 1920
@@ -61,7 +62,7 @@ def browser_management(request):
     start_page.login(user_login, user_password)
     start_page.should_success_login(user_login)
 
-    yield browser
+    yield
 
     attach.add_html(browser)
     attach.add_screenshot(browser)
