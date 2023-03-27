@@ -1,9 +1,9 @@
-import time
-
+import allure
 from notion_autotest_web.model import app
 from notion_autotest_web.data.members import user
 
 
+@allure.title('Add new member')
 def test_add_member():
     (
         app.member.open_window()
@@ -15,6 +15,7 @@ def test_add_member():
     )
 
 
+@allure.title('Delete new member')
 def test_delete_member():
     (
         app.member.open_window()
