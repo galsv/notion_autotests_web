@@ -97,6 +97,7 @@ class Page:
 
     def should_page_exist(self, page_url: str, exist: bool):
         with allure.step('Should page exist'):
+            time.sleep(2)
             result = any([page.element('a')
                          .matching(have.attribute('href')
                          .value_containing(page_url.lstrip('/')))
