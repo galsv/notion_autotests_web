@@ -25,7 +25,7 @@ def click_by_name(name: str):
 def click_hide_button_by_name(name: str, hide_btn: str = 'dots' or 'plus'):
     data_block = browser.all('.notion-outliner-private .notion-selectable').element_by(have.text(name))
     action = ActionChains(browser.driver)
-    btn = '.dots' if hide_btn is 'dots' else '.plusThick'
+    btn = '.dots' if hide_btn == 'dots' else '.plusThick'
     dots = browser.element(f'.notion-outliner-private .notion-selectable {btn}')
 
     action.move_to_element(data_block()).perform()

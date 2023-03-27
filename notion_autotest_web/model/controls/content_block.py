@@ -1,9 +1,7 @@
 import time
-import pyperclip
 from selene.support.shared import browser
-from selene import have, by, be, command, Element
+from selene import have, by, be, Element
 from selenium.webdriver import Keys
-from selenium.webdriver.common.by import By
 from notion_autotest_web.data.page import BlockContentType
 from selenium.webdriver.common.action_chains import ActionChains
 from notion_autotest_web.utils.path import to_resource
