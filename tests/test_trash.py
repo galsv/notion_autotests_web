@@ -6,7 +6,7 @@ import allure
 
 
 @allure.title('Page exist in trash after delete')
-def test_page_in_trash_after_delete():
+def test_page_in_trash_after_delete(browser_management):
     (
         app.page.create_new()
         .save_url()
@@ -23,7 +23,7 @@ def test_page_in_trash_after_delete():
 
 
 @allure.title('Restore page after delete')
-def test_restore_page():
+def test_restore_page(browser_management):
     (
         app.trash.open_menu()
         .should_page_in_trash()
@@ -39,7 +39,7 @@ def test_restore_page():
 
 
 @allure.title('Delete page permanently')
-def test_delete_page_permanently():
+def test_delete_page_permanently(browser_management):
     app.page.delete_by_name(trash_page.title)
 
     (

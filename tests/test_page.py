@@ -6,7 +6,7 @@ import allure
 
 
 @allure.title('Create new page')
-def test_create_page():
+def test_create_page(browser_management):
     (
         app.page.create_new()
 
@@ -19,7 +19,7 @@ def test_create_page():
 
 
 @allure.title('Change title on page')
-def test_change_tittle():
+def test_change_tittle(browser_management):
     (
         app.page.open_by_url(os.getenv('NOTION_PAGE_URL'))
         .change_title(empty_page_another_title.title)
@@ -31,7 +31,7 @@ def test_change_tittle():
 
 
 @allure.title('Delete page')
-def test_delete_page():
+def test_delete_page(browser_management):
     app.page.delete_by_name(empty_page.title)\
        .should_page_exist(os.getenv('NOTION_PAGE_URL'), False)
 

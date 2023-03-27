@@ -4,7 +4,7 @@ from notion_autotest_web.data.members import user
 
 
 @allure.title('Add new member')
-def test_add_member():
+def test_add_member(browser_management):
     (
         app.member.open_window()
 
@@ -16,7 +16,7 @@ def test_add_member():
 
 
 @allure.title('Delete new member')
-def test_delete_member():
+def test_delete_member(browser_management):
     (
         app.member.open_window()
 
