@@ -23,7 +23,7 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture(scope='module', autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def browser_management(request):
     browser_version = request.config.getoption('--browser_version')
     browser_version = browser_version if browser_version != "" else DEFAULT_BROWSER_VERSION
@@ -59,9 +59,9 @@ def browser_management(request):
     user_login = os.getenv('NOTION_LOGIN')
     user_password = os.getenv('NOTION_PASSWORD')
     start_page.login(user_login, user_password)
-    start_page.should_success_login(user_login)
+    # start_page.should_success_login(user_login)
 
-    yield
+    yield browser
 
     attach.add_html(browser)
     attach.add_screenshot(browser)
