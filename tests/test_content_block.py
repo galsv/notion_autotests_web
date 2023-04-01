@@ -24,7 +24,7 @@ def test_fill_content(browser_management):
         .should_content_blocks(content_page.content_block)
 
 
-@allure.title('Fill content blocks on page')
+@allure.title('Change page tittle')
 def test_change_color_test(browser_management):
     app.page.change_colour_in_text_block(1, Color.Yellow, True)
     app.page.change_colour_in_text_block(1, Color.Yellow, False)
