@@ -7,13 +7,16 @@ Notion is a freemium productivity and note-taking web application developed by N
 <!-- Technology -->
 
 ### Tools and a technologies
+### Используемые технологии
 <p  align="center">
   <code><img width="5%" title="Pycharm" src="notion_autotest_web/resources/images/logo_stacks/pycharm.png"></code>
   <code><img width="5%" title="Python" src="notion_autotest_web/resources/images/logo_stacks/python.png"></code>
   <code><img width="5%" title="Pytest" src="notion_autotest_web/resources/images/logo_stacks/pytest.png"></code>
-  <code><img width="5%" title="Requests" src="notion_autotest_web/resources/images/logo_stacks/requests.png"></code>
+  <code><img width="5%" title="Selene" src="notion_autotest_web/resources/images/logo_stacks/selene.png"></code>
+  <code><img width="5%" title="Selenium" src="notion_autotest_web/resources/images/logo_stacks/selenium.png"></code>
   <code><img width="5%" title="GitHub" src="notion_autotest_web/resources/images/logo_stacks/github.png"></code>
   <code><img width="5%" title="Jenkins" src="notion_autotest_web/resources/images/logo_stacks/jenkins.png"></code>
+  <code><img width="5%" title="Selenoid" src="notion_autotest_web/resources/images/logo_stacks/selenoid.png"></code>
   <code><img width="5%" title="Allure Report" src="notion_autotest_web/resources/images/logo_stacks/allure_report.png"></code>
   <code><img width="5%" title="Allure TestOps" src="notion_autotest_web/resources/images/logo_stacks/allure_testops.png"></code>
   <code><img width="5%" title="Jira" src="notion_autotest_web/resources/images/logo_stacks/jira.png"></code>
@@ -62,7 +65,7 @@ Notion is a freemium productivity and note-taking web application developed by N
 <!-- Allure TestOps -->
 
 ### <img width="3%" title="Allure TestOps" src="notion_autotest_web/resources/images/logo_stacks/allure_testops.png"> Allure TestOps Integration
-### [Dashboard](https://allure.autotests.cloud/project/2086/dashboards)
+### [Dashboard](https://allure.autotests.cloud/project/2092/dashboards)
 ##### Results are uploaded there and the automated test-cases can be automatically updated accordingly to the recent changes in the code.
 ![This is an image](notion_autotest_web/resources/images/screenshots/allure_testops_dashboard.png)
 
